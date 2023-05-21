@@ -1,0 +1,20 @@
+<h2>Add Employee</h2>
+
+<%= form_for :employee, url: employees_path do |f| %>
+  <p>
+    <%= f.label :name, class:"form-label" %><br>
+    <%= f.text_field :name, class:"form-control" %>
+  </p>  
+
+  <p>
+    <%= f.label :Number, class:"form-label" %><br>
+    <%= f.text_field :emp_id, class:"form-control" %>
+  </p>
+
+  <br/>
+  <p>
+    <%= f.submit class:"btn btn-primary" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', employees_path, class:"btn btn-secondary" %>
